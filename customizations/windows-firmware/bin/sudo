@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+# Only this launched GUI receives this private command directory in PATH.
+import os
+from pathlib import Path
+import sys
+
+integration = Path(__file__).resolve().parent.parent / "integration.py"
+os.execv("/usr/bin/python3", ["/usr/bin/python3", str(integration), "--sudo-hook", *sys.argv[1:]])
