@@ -47,6 +47,8 @@ binary or a replacement for the separate shim/MOK installation backup.
 In a fork, keep this layer under `customizations/windows-firmware/` so it
 does not replace upstream code. No signing private keys are included.
 See RECOVERY.md for reinstall guidance and the separate boot setup record.
+See [SECURE_BOOT_METHODS.md](SECURE_BOOT_METHODS.md) for the trust chain,
+installation history, Windows workaround, alternatives and their tradeoffs.
 
 On another Linux OS, install and review rEFInd_GUI and its normal privileged
 helper first. Confirm shim/MOK booting, Secure Boot and the Windows firmware
@@ -63,7 +65,8 @@ establish that the current Windows firmware entry is active; see RECOVERY.md.
 ## Rollback (when requested)
 
 Restore the original Desktop shortcut from the setup backup and remove the
-user app-menu override to use the original system launcher again. Restore
-the pre-test GUI config and use Install Config if also rolling back the
-Windows firmware launch method. Removing the automation alone does not
+user app-menu override to use the original system launcher again. For an
+appearance rollback, use a reviewed saved config that retains the Windows
+method; the old direct-chainload config failed its boot test.
+Removing the automation alone does not
 change the live EFI config, Secure Boot or firmware entries.
