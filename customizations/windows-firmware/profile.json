@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "gui_executable": "/etc/rEFInd/rEFInd_GUI",
+  "helper_executable": "/etc/rEFInd/rEFInd_GUI_helper",
+  "gui_sha256": "fa1788d3b28ccec18ce9b87af5856959476ea956b1c083f63a060d03efe65829",
+  "helper_sha256": "68ee3a57456e9722cef615cd27a43e4c80cf5060b569e4582f3048ab7be84169",
+  "windows_esp_guid": "c0c58765-a095-452a-87d2-76c8a5888393",
+  "gui_data_relative": ".local/rEFInd_GUI/GUI",
+  "state_relative": ".local/state/refind-gui-automatic"
+}
